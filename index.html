@@ -3,102 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdulmalik | Developer Portfolio</title>
+  <title>Discover Oman | Ultimate Travel Guide</title>
   <style>
     * {
       box-sizing: border-box;
       transition: all 0.3s ease-in-out;
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1350&q=80') no-repeat center center/cover;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      backdrop-filter: blur(2px);
-      padding: 0 20px;
+      background: #f3f3f3;
+      color: #333;
     }
 
     header {
-      padding: 60px 0 20px;
+      background: url('https://cdn.pixabay.com/photo/2022/08/02/12/58/desert-7359735_1280.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
       text-align: center;
-    }
-
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 3px solid #00c6ff;
-      margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
     }
 
     header h1 {
-      font-size: 3rem;
-      color: #00d9ff;
+      font-size: 3.5rem;
       margin-bottom: 10px;
+      color: #ffd700;
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #e0f7fa;
+      font-size: 1.4rem;
+      font-weight: 300;
     }
 
-    .section {
-      background-color: rgba(0, 0, 0, 0.6);
-      max-width: 800px;
+    nav {
+      background: #00796b;
+      padding: 10px 0;
       text-align: center;
-      margin-top: 30px;
-      padding: 25px;
-      border-radius: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .section h2 {
-      color: #ffd700;
-      margin-bottom: 10px;
-    }
-
-    .section p {
-      line-height: 1.6;
-      color: #ffffff;
-    }
-
-    .button {
-      margin-top: 30px;
-      background: #00c6ff;
-      color: #fff;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    nav a {
+      color: white;
       text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 198, 255, 0.4);
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
 
-    .button:hover {
-      background: #007acc;
-      transform: scale(1.05);
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2.2rem;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .destinations img,
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .destinations img:hover,
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
 
     footer {
-      margin-top: auto;
-      padding: 30px 0;
-      font-size: 0.9rem;
-      color: #ccc;
+      background: #004d40;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 30px;
+      background: #00796b;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .contact-btn:hover {
+      background: #004d40;
     }
 
     @media screen and (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
-      .section h2 {
-        font-size: 1.4rem;
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
       }
     }
   </style>
@@ -106,27 +138,56 @@
 <body>
 
   <header>
-    <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Abdulmalik" class="profile-pic" />
-    <h1>👋 Welcome to Abdulmalik’s World</h1>
-    <p>Turning ideas into reality through code</p>
+    <h1>Welcome to Oman</h1>
+    <p>Explore the Jewel of the Arabian Peninsula 🌍</p>
   </header>
 
-  <div class="section">
-    <h2>🚀 About Me</h2>
-    <p>I’m a passionate developer who builds web and mobile apps that solve real-world problems. Whether it's frontend, backend, or full-stack — I love bringing ideas to life!</p>
-  </div>
+  <nav>
+    <a href="#about">About Oman</a>
+    <a href="#destinations">Top Destinations</a>
+    <a href="#culture">Culture</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="section">
-    <h2>💡 Projects</h2>
-    <p>Coming soon: a showcase of smart water delivery apps, cybersecurity dashboards, and more!</p>
-  </div>
+  <section id="about">
+    <h2>About Oman</h2>
+    <p>Oman is a breathtaking blend of deserts, mountains, beaches, and history. With its deep-rooted traditions and modern development, it offers a unique travel experience like no other. From the capital Muscat's stunning coastline to the golden dunes of the Wahiba Sands, every corner of Oman holds something magical.</p>
+  </section>
 
-  <div class="section">
-    <a href="mailto:abdulmalik@example.com" class="button">📬 Contact Me</a>
-  </div>
+  <section id="destinations" class="destinations">
+    <h2>Top Destinations</h2>
+
+    <h3>🏰 Nizwa Fort</h3>
+    <img src="https://cdn.pixabay.com/photo/2020/03/07/20/15/nizwa-4910995_1280.jpg" alt="Nizwa Fort" />
+
+    <h3>🏞️ Wadi Shab</h3>
+    <img src="https://cdn.pixabay.com/photo/2018/02/10/21/28/wadi-shab-3143865_1280.jpg" alt="Wadi Shab" />
+
+    <h3>🏖️ Salalah Beaches</h3>
+    <img src="https://cdn.pixabay.com/photo/2019/09/09/18/20/salalah-4463312_1280.jpg" alt="Salalah Beach" />
+  </section>
+
+  <section id="culture">
+    <h2>Culture & Traditions</h2>
+    <p>Omani culture is rich and welcoming. From traditional clothing like the dishdasha to beautiful silver jewelry, the people of Oman preserve their heritage with pride. Don’t miss tasting Omani halwa, attending a frankincense market, or watching the colorful camel races held across the country.</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <img src="https://cdn.pixabay.com/photo/2018/03/30/15/11/desert-3278585_1280.jpg" alt="Oman Desert" />
+    <img src="https://cdn.pixabay.com/photo/2020/03/07/18/00/oman-4910783_1280.jpg" alt="Coastline" />
+    <img src="https://cdn.pixabay.com/photo/2018/03/30/14/40/oman-3278556_1280.jpg" alt="Omani Village" />
+  </section>
+
+  <section id="contact">
+    <h2>Contact for Travel Plans</h2>
+    <p>Ready to explore Oman with a personalized guide or trip plan? Let us help you design the journey of a lifetime.</p>
+    <a href="mailto:abdulmalik@example.com" class="contact-btn">📧 Contact Us</a>
+  </section>
 
   <footer>
-    &copy; 2025 Abdulmalik — Built with 💙 on GitHub Pages
+    &copy; 2025 Discover Oman | Website by Abdulmalik. All rights reserved.
   </footer>
 
 </body>
