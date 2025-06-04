@@ -5,43 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdulmalik | Developer Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1350&q=80') no-repeat center center/cover;
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
+      backdrop-filter: blur(2px);
       padding: 0 20px;
     }
+
     header {
       padding: 60px 0 20px;
       text-align: center;
     }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #00c6ff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
     header h1 {
       font-size: 3rem;
       color: #00d9ff;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 1.2rem;
-      color: #c2e9fb;
+      color: #e0f7fa;
     }
+
     .section {
+      background-color: rgba(0, 0, 0, 0.6);
       max-width: 800px;
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 12px;
     }
+
     .section h2 {
       color: #ffd700;
       margin-bottom: 10px;
     }
+
     .section p {
       line-height: 1.6;
-      color: #e0f7fa;
+      color: #ffffff;
     }
+
     .button {
       margin-top: 30px;
       background: #00c6ff;
@@ -52,21 +77,26 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 198, 255, 0.4);
     }
+
     .button:hover {
       background: #007acc;
+      transform: scale(1.05);
     }
+
     footer {
       margin-top: auto;
-      padding: 20px 0;
+      padding: 30px 0;
       font-size: 0.9rem;
       color: #ccc;
     }
+
     @media screen and (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
+
       .section h2 {
         font-size: 1.4rem;
       }
@@ -74,7 +104,9 @@
   </style>
 </head>
 <body>
+
   <header>
+    <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Abdulmalik" class="profile-pic" />
     <h1>👋 Welcome to Abdulmalik’s World</h1>
     <p>Turning ideas into reality through code</p>
   </header>
@@ -94,7 +126,8 @@
   </div>
 
   <footer>
-    &copy; 2025 Abdulmalik — Made with 💙 and GitHub Pages
+    &copy; 2025 Abdulmalik — Built with 💙 on GitHub Pages
   </footer>
+
 </body>
 </html>
